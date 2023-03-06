@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:yashudha_property_user/auth/email_auth/email_auth.dart';
 
 class Auth extends StatefulWidget {
   const Auth({super.key});
@@ -32,7 +33,10 @@ class _AuthState extends State<Auth> {
             child: Container(
               margin: EdgeInsets.only(left: 10, right: 10, top: 20),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (builder) => EmailAuth()));
+                },
                 child: Text("Continue with Email"),
                 style: ElevatedButton.styleFrom(
                     shape: StadiumBorder(),
