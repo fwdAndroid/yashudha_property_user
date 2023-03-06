@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:yashudha_property_user/payment/payment_remainder.dart';
+import 'package:yashudha_property_user/plot/plotinfo.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});
@@ -138,114 +139,126 @@ class _Home_ScreenState extends State<Home_Screen> {
                     scrollDirection: Axis.horizontal,
                     itemCount: 20,
                     itemBuilder: (context, index) {
-                      return Padding(
-                          padding: EdgeInsets.all(4),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 148,
-                                width: 268,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  color: Color(0xffF5F4F8),
-                                ),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      width: 130,
-                                      height: 140,
-                                      child: Stack(
-                                        children: [
-                                          Image.asset("assets/Rectangle 6.png"),
-                                          Padding(
-                                            padding: const EdgeInsets.all(4.0),
-                                            child: Container(
-                                              width: 35,
-                                              height: 35,
-                                              decoration: BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                  color: Color(0xff8BC83F)),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(4.0),
-                                                child: Icon(
-                                                  Icons.favorite,
-                                                  color: Color(0xffFFFFFF),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Align(
-                                            alignment: Alignment.bottomLeft,
-                                            child: Padding(
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (builder) => PlotInfo()));
+                        },
+                        child: Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 148,
+                                  width: 268,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(25),
+                                    color: Color(0xffF5F4F8),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        width: 130,
+                                        height: 140,
+                                        child: Stack(
+                                          children: [
+                                            Image.asset(
+                                                "assets/Rectangle 6.png"),
+                                            Padding(
                                               padding:
                                                   const EdgeInsets.all(4.0),
                                               child: Container(
-                                                width: 70,
-                                                height: 25,
+                                                width: 35,
+                                                height: 35,
                                                 decoration: BoxDecoration(
-                                                    color: Color(0xff234F68)),
-                                                child: Center(
-                                                  child: Text(
-                                                    "Appartment",
-                                                    style: TextStyle(
-                                                      fontSize: 10,
-                                                      color: Color(0xffFFFFFF),
+                                                    shape: BoxShape.circle,
+                                                    color: Color(0xff8BC83F)),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(4.0),
+                                                  child: Icon(
+                                                    Icons.favorite,
+                                                    color: Color(0xffFFFFFF),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Align(
+                                              alignment: Alignment.bottomLeft,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(4.0),
+                                                child: Container(
+                                                  width: 70,
+                                                  height: 25,
+                                                  decoration: BoxDecoration(
+                                                      color: Color(0xff234F68)),
+                                                  child: Center(
+                                                    child: Text(
+                                                      "Appartment",
+                                                      style: TextStyle(
+                                                        fontSize: 10,
+                                                        color:
+                                                            Color(0xffFFFFFF),
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    Container(
-                                        margin: EdgeInsets.only(top: 20),
-                                        width: 100,
-                                        height: 140,
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              "Sky Dandelions \nApartment",
-                                              style: TextStyle(
-                                                  color: Color(0xff252B5C),
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.w700),
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Text(
-                                              "Location",
-                                              style: TextStyle(
-                                                  color: Color(0xff53587A)),
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Text(
-                                              "246\$",
-                                              style: TextStyle(
-                                                  color: Color(0xff53587A)),
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
                                           ],
-                                        ))
-                                  ],
-                                ),
-                              )
-                            ],
-                          ));
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Container(
+                                          margin: EdgeInsets.only(top: 20),
+                                          width: 100,
+                                          height: 140,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                "Sky Dandelions \nApartment",
+                                                style: TextStyle(
+                                                    color: Color(0xff252B5C),
+                                                    fontSize: 12,
+                                                    fontWeight:
+                                                        FontWeight.w700),
+                                              ),
+                                              SizedBox(
+                                                height: 10,
+                                              ),
+                                              Text(
+                                                "Location",
+                                                style: TextStyle(
+                                                    color: Color(0xff53587A)),
+                                              ),
+                                              SizedBox(
+                                                height: 10,
+                                              ),
+                                              Text(
+                                                "246\$",
+                                                style: TextStyle(
+                                                    color: Color(0xff53587A)),
+                                              ),
+                                              SizedBox(
+                                                height: 10,
+                                              ),
+                                            ],
+                                          ))
+                                    ],
+                                  ),
+                                )
+                              ],
+                            )),
+                      );
                     }),
               ),
               Container(
