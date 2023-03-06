@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:yashudha_property_user/auth/auth.dart';
 
 class SecondSplashScreen extends StatefulWidget {
   const SecondSplashScreen({super.key});
@@ -34,10 +35,8 @@ class _SecondSplashScreenState extends State<SecondSplashScreen> {
                   top: 400,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (builder) => SecondSplashScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (builder) => Auth()));
                     },
                     child: Text(
                       "Next",
