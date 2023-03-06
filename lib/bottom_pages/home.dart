@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:yashudha_property_user/payment/payment_remainder.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});
@@ -49,7 +50,14 @@ class _Home_ScreenState extends State<Home_Screen> {
                   SizedBox(
                     width: 10,
                   ),
-                  Icon(Icons.payment_sharp),
+                  InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (builder) => PaymentRemainder()));
+                      },
+                      child: Icon(Icons.payment_sharp)),
                   SizedBox(
                     width: 10,
                   ),
